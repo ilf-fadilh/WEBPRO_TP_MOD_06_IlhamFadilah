@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>103092400051_Soal1</title>
+    <link type="text/css" rel="stylesheet" href="style1.css" />
+  </head>
+  <body onload="tampilkanData()">
+    <form>
+      <div class="form-group">
+        <label>Nama</label>
+        <input type="text" class="form-control" id="nama" readonly />
+      </div>
+      <div class="form-group">
+        <label>NIM</label>
+        <input type="text" class="form-control" id="nim" readonly />
+      </div>
+    </form>
+
+    <script type="text/javascript">
+      // Minta input lewat prompt, lalu menampilkannya ke form
+      function tampilkanData() {
+        // Prompt1 : nama
+        var nama = prompt("Masukkan nama kamu:");
+        // Prompt2 : nim
+        var nim = prompt("Masukkan nim kamu:");
+
+        // Jika user menekan Cancel, prompt mengembalikan null -> ganti string kosong
+        if (nama === null) nama = "";
+        if (nim === null) nim = "";
+
+        // Tampilkan hasil inputan ke dalam form
+        document.getElementById("nama").value = nama.trim();
+        document.getElementById("nim").value = nim.trim();
+      }
+    </script>
+  </body>
+</html>
